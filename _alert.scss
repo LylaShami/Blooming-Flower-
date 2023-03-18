@@ -1,18 +1,13 @@
-//
-// alert.scss
-// Extended from Bootstrap
-//
+@mixin alert-variant($background, $border, $color) {
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
 
-.alert {
-  .alert-inner--icon {
-    display: inline-block;
-    font-size: 1.25rem;
-    margin-right: 1.25rem;
-    vertical-align: middle;
+  hr {
+    border-top-color: darken($border, 5%);
   }
 
-  .alert-inner--text {
-    display: inline-block;
-    vertical-align: middle;
+  .alert-link {
+    color: darken($color, 10%);
   }
 }

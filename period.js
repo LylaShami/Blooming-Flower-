@@ -1,32 +1,11 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+function calculate() {
+    var lastPeriod = new Date(document.getElementById("last-period").value);
+    var cycleLength = parseInt(document.getElementById("cycle-length").value);
+    var periodLength = parseInt(document.getElementById("period-length").value);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+    var nextPeriod = new Date(lastPeriod.getTime() + (cycleLength * 86400000));
+    var ovulation = new Date(nextPeriod.getTime() - ((cycleLength - periodLength) / 2 * 86400000));
+
+    var results = document.getElementById("results");
+    results.innerHTML = "<p>Next Period: " + nextPeriod.toLocaleDateString() + "</p><p>Ovulation: " + ovulation.toLocaleDateString() + "</p>";
 }
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-
-}
-
-
-
-
-

@@ -1,269 +1,72 @@
+/* font styles */
+
 body {
-  background-image: url(images/image20.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: Arial, sans-serif;
-}
-.main {
-margin-top: 100px;
-padding: 100px;
-}
-
-.navigation {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px;
-  color: #fff;
-}
-.navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-}
-.navigation li {
-  display: inline-block;
-  margin: 0 10px;
-  color: #fff;
-}
-.navigation a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  transition: color 0.3s ease;
-  color: #fff;
-}
-.navigation a:hover {
-  color: #fff;
-}
-
-.container {
-  margin: top 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  animation-name: fade-in;
-  animation-duration: 3s;
-animation-timing-function: ease-in-out;
-animation-fill-mode: forwards;
-}
-.text {
-  color:#fff;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 20px;
-}
-@keyframes fade-in {
-  from {
-      opacity: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
   }
-  to {
-      opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-moz-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-webkit-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-o-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-ms-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-form {
-  max-width: auto;
-  margin: 50px auto;
-  padding: 30px 20px;
-}
-
-/* Styling form-control Class */
-.form-control {
-  text-align: left;
-  margin-bottom: 25px;
-}
-/* Styling form-control Label */
-.form-control label {
-  display: block;
-  margin-bottom: 10px;
-}
-/* Styling form-control input,
-select, textarea */
-.form-control input,
-.form-control select,
-.form-control textarea {
-  border: 1px solid #777;
-  border-radius: 2px;
-  font-family: inherit;
-  padding: 10px;
-  display: block;
-  width: 95%;
-}
-.form-control input[type="checkbox"] {
-  display: inline-block;
-  width: auto;
   
-}
- 
-.button {
-  background-color: #f4c3e5;
-  color: rgb(3, 2, 2);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-}
-        .big-button {
-          display: block;
-          margin: 0 auto;
-          padding: 12px 24px;
-          font-size: 24px;
-          color: #fff;
-          background-color: #ba92da;
-          border: none;
-          border-radius: 6px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-        }
-        
-        .big-button:hover {
-          background-color: #f0f4f8;
-        }
-        label {
-          cursor: pointer;
-        }
-       
-        @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
-
-
-        
-        .item-1, 
-        .item-2, 
-        .item-3 {
-          margin: top 150px;
-          position: absolute;
-          display: block;
-          text-align: center;
-          width: 60%;
-          
-          font-size: 2em;
-        
-          animation-duration: 15s;
-          animation-timing-function: ease-in-out;
-          animation-iteration-count: infinite;
-        }
-        
-        .item-1{
-          color:#fff;
-          animation-name: anim-1;
-          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(193, 133, 176), 0 0 70px rgb(193, 133, 176), 0 0 80px rgb(193, 133, 176), 0 0 100px rgb(193, 133, 176), 0 0 150px rgb(193, 133, 176); /* Applies the glowing effect to the text */
-        
-        }
-        
-        .item-2{
-          color:#fff;
-          animation-name: anim-2;
-          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(193, 133, 176), 0 0 70px rgb(193, 133, 176), 0 0 80px rgb(193, 133, 176), 0 0 100px rgb(193, 133, 176), 0 0 150px rgb(193, 133, 176); /* Applies the glowing effect to the text */
-        }
-        
-        .item-3{
-          color:#fff;
-          animation-name: anim-3;
-          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(193, 133, 176), 0 0 70px rgb(193, 133, 176), 0 0 80px rgb(193, 133, 176), 0 0 100px rgb(193, 133, 176), 0 0 150px rgb(193, 133, 176); /* Applies the glowing effect to the text */
-        }
-        
-        @keyframes anim-1 {
-          0%, 8.3% { left: -100%; opacity: 0; }
-          8.3%,25% { left: 25%; opacity: 1; }
-          33.33%, 100% { left: 110%; opacity: 0; }
-        }
-        
-        @keyframes anim-2 {
-          0%, 33.33% { left: -100%; opacity: 0; }
-          41.63%, 58.29% { left: 25%; opacity: 1; }
-          66.66%, 100% { left: 110%; opacity: 0; }
-        }
-        
-        @keyframes anim-3 {
-          0%, 66.66% { left: -100%; opacity: 0; }
-          74.96%, 91.62% { left: 25%; opacity: 1; }
-          100% { left: 110%; opacity: 0; }
-        }
-        .column {
-          float: left;
-          width: 33.33%;
-        }
-        
-        /* Clear floats after the columns */
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        .heading {
-        
-          size: 18px; /* Sets the font size of the text */
-          color: #fff; /* Sets the color of the text to white */
-        }
-        .text1 {
-          color: #fff;
-          size: 10px;
-          text-align: left;
-        }
-        .container1 {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      
-        .column {
-          float: left;
-          width: 33.33%;
-        }
-        
-        /* Clear floats after the columns */
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        .text2 {
-          color: #fff;
-          size: 10px;
-          text-align: center;
-        }
-        .text3 {
-          color: #fff;
-          size: 8px;
-          text-align: center;
-        }
-        .textcolumn1 {
-          color: #fff;
-          size: 8px;
-          text-align: center;
-        }
-       
- 
+  /* header styles */
+  header {
+    background-color: #F8B195;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.4rem;
+  }
+  
+  /* form styles */
+  form {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid #F8B195;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="date"],
+  input[type="number"] {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #F67280;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #C06C84;
+  }
+  
+  #results {
+    margin-top: 20px;
+  }
+  
+  .result-label {
+    font-weight: bold;
+  }
+  
+  .result-value {
+    margin-left: 10px;
+  }
+  

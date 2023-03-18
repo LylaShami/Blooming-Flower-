@@ -1,54 +1,42 @@
-//
-// breadcrumb.scss
-// Extended from Bootstrap
-//
-
-.breadcrumb-dark {
-
-  .breadcrumb-item {
-    color: $breadcrumb-dark-item-color;
-
-    + .breadcrumb-item::before {
-      color: $breadcrumb-dark-divider-color;
-    }
-
-    a {
-      color: $breadcrumb-dark-link-color;
-    }
-
-    a:hover {
-      color: $breadcrumb-dark-link-hover-color;
-    }
-
-    &.active {
-      color: $breadcrumb-dark-active-color;
-    }
-  }
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  margin-bottom: $breadcrumb-margin-bottom;
+  @include font-size($breadcrumb-font-size);
+  list-style: none;
+  background-color: $breadcrumb-bg;
+  @include border-radius($breadcrumb-border-radius);
 }
 
-.breadcrumb-light {
+.breadcrumb-item {
+  // The separator between breadcrumbs (by default, a forward-slash: "/")
+  + .breadcrumb-item {
+    padding-left: $breadcrumb-item-padding;
 
-  .breadcrumb-item {
-    color: $breadcrumb-light-item-color;
-
-    + .breadcrumb-item::before {
-      color: $breadcrumb-light-divider-color;
-    }
-
-    a {
-      color: $breadcrumb-light-link-color;
-    }
-
-    a:hover {
-      color: $breadcrumb-light-link-hover-color;
-    }
-
-    &.active {
-      color: $breadcrumb-light-active-color;
+    &::before {
+      display: inline-block; // Suppress underlining of the separator in modern browsers
+      padding-right: $breadcrumb-item-padding;
+      color: $breadcrumb-divider-color;
+      content: escape-svg($breadcrumb-divider);
     }
   }
-}
 
-.breadcrumb-no-gutter {
-  padding: 0;
+  // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+  // without `<ul>`s. The `::before` pseudo-element generates an element
+  // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+  //
+  // To trick IE into suppressing the underline, we give the pseudo-element an
+  // underline and then immediately remove it.
+  + .breadcrumb-item:hover::before {
+    text-decoration: underline;
+  }
+  // stylelint-disable-next-line no-duplicate-selectors
+  + .breadcrumb-item:hover::before {
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $breadcrumb-active-color;
+  }
 }
