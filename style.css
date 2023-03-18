@@ -1,111 +1,82 @@
+/* stlye sheet from: Coding with Elisa: https://www.youtube.com/watch?v=JDn6OAMnJwQ&t=245s */
+
+body {
+	background: #a216a7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	font-family: sans-serif;
+	box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(65, 5, 143);
-    background-size: cover;
-    font-family: "Montserrat", sans-serif;
-    text-align: center
+form {
+	width: 500px;
+	border: 2px solid #ccc;
+	padding: 30px;
+	background: #fff;
+	border-radius: 15px;
 }
 
-a{
-    text-decoration:none;
-    color:rgb(0, 0, 0)
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
 }
 
-li{
-    text-decoration: none;
-    list-style: none;
+input {
+	display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+}
+label {
+	color: #888;
+	font-size: 18px;
+	padding: 10px;
 }
 
-header{
-    margin-top: 200px;
-    margin-left:150px;
-    margin-right:150px;
-    background: rgba(137, 137, 207, 0.753);
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    height: 100px;
-    border-radius: 25px;
-    font-family:Arial, Helvetica, sans-serif;
+button {
+	float: right;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
+button:hover{
+	opacity: .7;
+}
+.error {
+   background: #F2DEDE;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
 }
 
-header p {
-    font-size: 16px;
+h1 {
+	text-align: center;
+	color: #fff;
 }
 
-
-
-.survey{
-    width: 80%;
-    margin: 20px auto;
-    background: rgba(137, 137, 207, 0.589);
-    color: rgb(0, 0, 0);
-    height: 300px;
-    border-radius: 3px;
-    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4);
-    border-radius: 25px;
-    font-family:Arial, Helvetica, sans-serif;
+a {
+	float: right;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+	text-decoration: none;
 }
-
-.survey h3 {
-    margin: 8px;
-    padding-top: 10px;
-}
-
-.survey li{
-    background-color:rgba(255, 255, 255, 0.473);
-    margin: 10px;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
-    margin-left: 100px;
-    margin-right: 100px;
-    border-radius: 5px;
-}
-
-.survey li.hover{
-    background-color: rgb(6, 50, 92);
-    width: 200px;
-    margin: 0 auto;
-    padding: 4px;
-    border-radius: 3px;
-
-    box-shadow: 0 0 11px rgba(59, 54, 54, 0.4); 
-}
-
-
-.end{
-    background: royalblue;
-    color: rgb(0, 0, 0);
-    width: 80%;
-    margin: 5% auto;
-    padding: 20px 0;
-    border-radius: 3px;
-    box-shadow:1px 1px 7px rgba(0, 0, 0, 0.4);
-}
-
-.end h1{
-    margin: 5px;
-}
-
-.end p{
-    padding: 10px;
-}
-
-.end a{
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 4px;
-    background: rgb(61, 61, 61);
-
-    outline: none;
-}
-
-.end a:hover{
-    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.404);
-    transition: 0.3s;
+a:hover{
+	opacity: .7;
 }
