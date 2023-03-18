@@ -1,0 +1,78 @@
+<div class="dashboard">
+    <style>
+        .dashboard {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.menu {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 250px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+    </style>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="track_period.html">Track You Period</a></li>
+        <li><a href="#">Track your Ovulation</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>Dashboard</h1>
+      <p>Welcome to your dashboard!</p>
+    </div>
+  </div>
+
+  <script>
+    // Add active class to clicked menu item
+const menuItems = document.querySelectorAll(".menu li a");
+
+menuItems.forEach((menuItem) => {
+  menuItem.addEventListener("click", () => {
+    menuItems.forEach((item) => {
+      item.classList.remove("active");
+    });
+    menuItem.classList.add("active");
+  });
+});
+
+  </script>

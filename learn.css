@@ -1,0 +1,154 @@
+.return-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(images/image20.jpeg);
+  }
+  .main{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 80vw;
+    margin: 50px auto;
+  }
+  .slide{
+    height: 60vh;
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    background-size: cover;
+    background-position: 50%;
+    flex: 0.5;
+    cursor: pointer;
+    transition: 0.5s linear flex;
+    -webkit-transition: 0.5s linear flex;
+    -moz-transition: 0.5s linear flex;
+    -ms-transition: 0.5s linear flex;
+    -o-transition: 0.5s linear flex;
+  }
+  @keyframes heading {
+    from{
+      bottom: 150px;
+      opacity: 0;
+    }
+    to{
+      bottom: 20px;
+      opacity: 1;
+    }
+  
+  }
+  .slide h2{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    color: #fff;
+  }
+  .slide h2 span{
+    font-size: 12px;
+    font-weight: 300;
+    display: block;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  .slide.active{
+    flex: 5;
+  }
+  .slide.active h2{
+    opacity: 1;
+    animation-name: heading;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .navigation {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+  }
+  .navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .navigation li {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+  }
+  .navigation a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    color: #fff;
+  }
+  .navigation a:hover {
+    color: #fff;
+  }
+  .text {
+    color:#fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .section-title {
+    color: rgb(253, 253, 253);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Times New 'Times New Roman', Times, serif;
+  }
+  .section-content {
+    color: rgb(253, 253, 253);
+    font-family: Times New 'Times New Roman', Times, serif;
+    line-height: 1.5;
+  }
+  main {
+    margin-top: 100px;
+    padding: 100px;
+  }
+  .button-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .button {
+    background-color: #f4c3e5;
+    color: rgb(3, 2, 2);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }

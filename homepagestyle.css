@@ -1,0 +1,122 @@
+body {
+    background-image: url(images/image20.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+main {
+  margin-top: 100px;
+  padding: 100px;
+}
+
+.navigation {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+}
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.navigation li {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+}
+.navigation a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    color: #fff;
+}
+.navigation a:hover {
+    color: #fff;
+}
+.container {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+
+.text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Times New 'Times New Roman', Times, serif;
+}
+
+
+  img {
+    order: 1;
+    width: 75%; 
+    height: 100%;
+
+  }
+
+.button-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  background-color: #f4c3e5;
+  color: rgb(3, 2, 2);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.section-title {
+  color: rgb(253, 253, 253);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Times New 'Times New Roman', Times, serif;
+}
+.section-content {
+  color: rgb(253, 253, 253);
+  font-family: Times New 'Times New Roman', Times, serif;
+  line-height: 1.5;
+}
+.container {
+  padding: 20px; /* Adds some padding to the container */
+  width: 75%; 
+  height: 100%;
+}
+.heading {
+  text-align: center; /* Centers the heading text */
+  font-size: 3em; /* Sets the font size of the text */
+  color: #fff; /* Sets the color of the text to white */
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(193, 133, 176), 0 0 70px rgb(193, 133, 176), 0 0 80px rgb(193, 133, 176), 0 0 100px rgb(193, 133, 176), 0 0 150px rgb(193, 133, 176); /* Applies the glowing effect to the text */
+  animation: neon-animation 1s ease-in-out infinite alternate; /* Applies an animation to the glowing effect */
+}
+
+@keyframes neon-animation {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(193, 133, 176), 0 0 70px rgb(193, 133, 176), 0 0 80px rgb(193, 133, 176), 0 0 100px rgb(193, 133, 176), 0 0 150px rgb(193, 133, 176); /* Sets the starting state of the text shadow */
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px rgb(193, 133, 176), 0 0 80px rgb(193, 133, 176), 0 0 90px rgb(193, 133, 176), 0 0 110px rgb(193, 133, 176), 0 0 160px rgb(193, 133, 176); /* Sets the ending state of the text shadow */
+  }
+}
+.centered-text {
+  text-align: center; /* Aligns the text in the center */
+  color: #fff;
+}
+
+
+
+

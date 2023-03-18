@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Period Calculator</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+    input{
+        width: 50vh;
+        height: 5vh;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .container-input{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+        width: 110vh;
+    }
+
+    .container{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(205, 171, 240);
+        margin: 0px 150px;
+        height: 40vh;
+        justify-content: center;
+    }
+
+    #button{
+        width: 15vh;
+        height: 5vh;
+        font-size: 20px;
+        border-radius: 5px;
+        background-color: rgb(87, 117, 117);
+        color: white;
+        border: none;
+        margin-top: 10px;
+    }
+
+    .container-result{
+        display: flex;
+        flex-direction: column;
+        background-color:rgb(205, 171, 240);
+        margin: 10px 150px;
+        height: 40vh;
+        justify-content: center;
+        font-family: 'rubik', sans-serif;
+    }
+
+    .container-result-date{
+        display: flex;
+    }
+
+    .container-result-ovulation-date{
+        display: flex;
+    }
+    
+    .container-result-fertility-period{
+        display: flex;
+    }
+    
+    #result{
+        padding-left: 10px;
+        color: white;
+    }
+
+    #result-ovulation{
+        padding-left: 10px;
+        color: aliceblue;
+    }
+
+    #result-fertility{
+        padding-left: 10px;
+        color: white;
+    }
+
+    #result-fertility2{
+        padding-left: 10px;
+        color: white;
+    }
+</style>
+<body>
+    <div class="container">
+        
+        <div class="container-input">
+            <div class="container-input-date">
+                <h2>Enter the first day of your period</h2>
+                <input type="date" id="input" />
+            </div>
+
+            <div class="container-input-day">
+               <h2>Enter your number of day period</h2>
+               <input type="text" id="period" placeholder="type here...." />
+            </div>
+        </div>
+    <br/>
+        <div class="container-input-button">
+            <button id="button">Calculate</button>
+        </div>
+    </div>
+
+    <div class="container-result">
+        <div class="container-result-date">
+            <h3>Your period is due:</h3>
+            <h3 id="result"></h3>
+        </div>
+
+
+        <div class="container-result-ovulation-date">
+            <h3>Your ovulation day:</h3>
+            <h3 id="result-ovulation"></h3>
+        </div>
+
+
+        <div class="container-result-fertility-period">
+            <h3>Your fertility period:</h3>
+            <h3 id="result-fertility"></h3>
+            
+            <h3 id="result-fertility2"></h3>
+        </div>
+    </div>
+</body>
+<script>
+var input = document.getElementById("input");
+var period = document.getElementById("period");
+var button = document.getElementById("button")
+
+function periodDue(){
+    var showInp = input.value;
+    var showPer = period.value;
+    var date = new Date(showInp);
+    var day = date.getDate();
+    var periodDay = parseInt(showPer);
+     var periodDue = new Date(date.setDate(day+periodDay));
+     var periodDueDate = periodDue.toDateString();
+     var result = document.getElementById('result');
+     result.innerHTML = periodDueDate;
+     
+
+}
+function ovulationDay(){
+    var showInp = input.value;
+    var showPer = period.value;
+    var date = new Date(showInp);
+    var day = date.getDate();
+    var periodDay = parseInt(showPer);
+     var ovulationDay = new Date(date.setDate(day + periodDay-14));
+     var ovulationDayDate = ovulationDay.toDateString()
+     var result = document.getElementById("result-ovulation");
+     result.innerHTML = ovulationDayDate;
+}
+
+
+function fertilityPeriod(){
+    var showInp = input.value;
+    var showPer = period.value;
+    var date = new Date(showInp);
+    var day = date.getDate();
+    var periodDay = parseInt(showPer);
+      var fertilityPeriod = new Date(date.setDate(day+periodDay-17));
+      var fertilityPeriodDate = fertilityPeriod.toDateString();
+      var result = document.getElementById('result-fertility');
+      result.innerHTML = `From ${fertilityPeriodDate}`
+
+}
+
+
+function fertilityPeriod2(){
+    var showInp = input.value;
+    var showPer = period.value;
+    var date = new Date(showInp);
+    var day = date.getDate();
+    var periodDay = parseInt(showPer);
+      var fertilityPeriod = new Date(date.setDate(day+periodDay-14));
+      var fertilityPeriodDate = fertilityPeriod.toDateString();
+      var result = document.getElementById('result-fertility2');
+      result.innerHTML = `To ${fertilityPeriodDate}`
+
+}
+
+
+
+
+
+button.addEventListener("click",()=>{
+    periodDue();
+    ovulationDay();
+    fertilityPeriod();
+    fertilityPeriod2();
+})
+
+</script>
+</html>
